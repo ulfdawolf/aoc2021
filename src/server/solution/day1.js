@@ -22,7 +22,7 @@ const solvePart2 = (data) => {
   return solvePart1(threes);
 };
 
-export const solution1Example = () => solvePart1(example);
-export const solution1 = () => solvePart1(part1);
-export const solution2Example = () => solvePart2(example);
-export const solution2 = () => solvePart2(part1);
+export const day1Example1 = () => solvePart1(example);
+export const day1Solution1 = () => solvePart1(part1);
+export const day1Example2 = () => solvePart2(example);
+export const day1Solution2 = () => solvePart2(part1);

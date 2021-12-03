@@ -1,11 +1,18 @@
 import express from "express"; //Import the express dependency
 import path from "path";
 import {
-  solution1Example,
-  solution1,
-  solution2Example,
-  solution2,
+  day1Example1,
+  day1Solution1,
+  day1Example2,
+  day1Solution2,
 } from "./solution/day1.js";
+
+import {
+  day2Example1,
+  day2Solution1,
+  day2Example2,
+  day2Solution2,
+} from "./solution/day2.js";
 
 const app = express(); //Instantiate an express app, the main work horse of this server
 const port = 8001; //Save the port number where your server will be listening
@@ -19,10 +26,20 @@ app.get("/", (req, res) => {
 
 app.get("/day1", (req, res) => {
   const result = {
-    solution1Example: solution1Example(),
-    solution1: solution1(),
-    solution2Example: solution2Example(),
-    solution2: solution2(),
+    day1Example1: day1Example1(),
+    day1Solution1: day1Solution1(),
+    day1Example2: day1Example2(),
+    day1Solution2: day1Solution2(),
+  };
+  res.send(result);
+});
+
+app.get("/day2", (req, res) => {
+  const result = {
+    day2Example1: day2Example1(),
+    day2Solution1: day2Solution1(),
+    day2Example2: day2Example2(),
+    day2Solution2: day2Solution2(),
   };
   res.send(result);
 });
