@@ -16,6 +16,10 @@ import {
 
 import { day3Results } from "./solution/day3.js";
 
+import { day4Results } from "./solution/day4.js";
+
+import { day5Results } from "./solution/day5.js";
+
 const app = express(); //Instantiate an express app, the main work horse of this server
 const port = 8001; //Save the port number where your server will be listening
 
@@ -48,6 +52,14 @@ app.get("/day2", (req, res) => {
 
 app.get("/day3", (req, res) => {
   res.send(day3Results);
+});
+
+app.get("/day4", (req, res) => {
+  res.send(day4Results);
+});
+
+app.get("/day5", (req, res) => {
+  res.send(day5Results);
 });
 
 app.listen(port, () => {
